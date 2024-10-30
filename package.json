@@ -1,0 +1,36 @@
+{
+  "name": "nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@contentstack/delivery-sdk": "^4.3.0",
+    "@contentstack/live-preview-utils": "^2.0.4",
+    "@contentstack/personalize-edge-sdk": "^1.0.3",
+    "@hookform/resolvers": "^3.9.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.446.0",
+    "next": "12.3.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2",
+    "autoprefixer": "^10.4.15",
+    "eslint": "8.49.0",
+    "eslint-config-next": "12.3.4",
+    "postcss": "^8.4.30",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^4.9.5"
+  }
+}
