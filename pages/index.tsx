@@ -10,6 +10,7 @@ import { getPage, PersonalizeContext } from "../lib/contentstack";
 import ContentstackLivePreview from "@contentstack/live-preview-utils";
 import PersonalizeButton from "../components/PersonalizeButton";
 import { Page } from "../lib/types";
+import Header from "../components/Header";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -31,7 +32,8 @@ const Home: NextPage = () => {
     // send Personalize analytics impression for the experience with shortID '0'.
     // see: Contentstack Dashboard > Personalize project > Experiences > Experience
     PersonalizeInstance.triggerImpression("0");
-  }, []);
+  }, [variantParam]);
+
 
   const debug = {
     variantParam,
@@ -48,6 +50,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="max-w-screen-2xl mx-auto">
+      <Header />
         <section className="p-4">
           {variantParam ? (
             <div className="mb-8">
