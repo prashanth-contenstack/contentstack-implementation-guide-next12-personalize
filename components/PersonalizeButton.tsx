@@ -45,7 +45,7 @@ const PersonalizeButton: React.FC<PersonalizeButtonProps> = ({ type }) => {
     // see: Contentstack Dashboard > Personalize project > Events
     await Personalize.triggerEvent(eventName);
 
-    window.location.href = "http://localhost:3000";
+    window.location.href = "/";
   };
 
   return (
