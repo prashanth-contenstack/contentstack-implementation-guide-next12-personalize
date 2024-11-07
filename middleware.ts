@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 import Personalize from '@contentstack/personalize-edge-sdk';
-import { MiddlewareRequest, type NextRequest } from '@netlify/next';
 
 export const config = {
   matcher: [
@@ -8,10 +8,7 @@ export const config = {
   ],
 }
 
-export default async function middleware(NextRequest: NextRequest) {
-
-  const request = new MiddlewareRequest(NextRequest)
-
+export default async function middleware(request: NextRequest) {
   const projectUid = process.env.NEXT_PUBLIC_CONTENTSTACK_P13N_PROJECT_ID as string;
   const edgeApiUrl = process.env.NEXT_PUBLIC_CONTENTSTACK_REGION === 'EU' ? 'https://eu-personalize-edge.contentstack.com' : 'https://personalize-edge.contentstack.com'
 
