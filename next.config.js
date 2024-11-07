@@ -3,7 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     middlewarePrefetch: true,
-    runtime: 'edge'
   },
   swcMinify: true,
   images: {
