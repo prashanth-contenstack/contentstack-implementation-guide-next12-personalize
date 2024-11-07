@@ -28,5 +28,7 @@ export default async function middleware(NextRequest: NextRequest) {
 
   await Personalize.addStateToResponse(response)
 
+  response.headers.set('x-middleware-status', 'running-on-edge');
+
   return response;
 }
