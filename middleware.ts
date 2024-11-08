@@ -30,5 +30,7 @@ export default async function middleware(NextRequest: NextRequest) {
 
   response.headers.set('x-middleware-status', 'running-on-edge');
 
+  console.log('EDGE MIDDLEWARE RESPONSE HEADER SET')
+
   return response;
 }
